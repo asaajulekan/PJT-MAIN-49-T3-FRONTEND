@@ -5,6 +5,9 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+div {
+    display: block;
+}
 
 /* links */
 link {
@@ -345,9 +348,7 @@ img {
     border-style: none;
 }
 
-div {
-    display: block;
-}
+
 
 .program-card img {
     margin-bottom: 48px;
@@ -476,4 +477,8 @@ hr {
 }
 .mr-auto, .mx-auto {
     margin-right: auto!important;
+}
+
+.contact-icons{
+    border-radius: 0.2px;
 }

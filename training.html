@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100;1,200&display=swap" rel="stylesheet">
+        <link rel="icon" href="./images/favicon.png" sizes="16x16" type="image/pn">
+        <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+        <script src="https://kit.fontawesome.com/5760397bba.js" crossorigin="anonymous"></script>
+        <style media="all" id="fa-v4-font-face">@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");unicode-range:U+f004-f005,U+f007,U+f017,U+f022,U+f024,U+f02e,U+f03e,U+f044,U+f057-f059,U+f06e,U+f070,U+f075,U+f07b-f07c,U+f080,U+f086,U+f089,U+f094,U+f09d,U+f0a0,U+f0a4-f0a7,U+f0c5,U+f0c7-f0c8,U+f0e0,U+f0eb,U+f0f3,U+f0f8,U+f0fe,U+f111,U+f118-f11a,U+f11c,U+f133,U+f144,U+f146,U+f14a,U+f14d-f14e,U+f150-f152,U+f15b-f15c,U+f164-f165,U+f185-f186,U+f191-f192,U+f1ad,U+f1c1-f1c9,U+f1cd,U+f1d8,U+f1e3,U+f1ea,U+f1f6,U+f1f9,U+f20a,U+f247-f249,U+f24d,U+f254-f25b,U+f25d,U+f271-f274,U+f279,U+f28b,U+f28d,U+f2b5-f2b6,U+f2b9,U+f2bb,U+f2bd,U+f2c1-f2c2,U+f2d0,U+f2d2,U+f2dc,U+f2ed,U+f3a5,U+f3d1,U+f410}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");unicode-range:U+f003,U+f006,U+f014,U+f016,U+f01a-f01b,U+f01d,U+f040,U+f045-f047,U+f05c-f05d,U+f07d-f07e,U+f087-f088,U+f08a-f08b,U+f08e,U+f090,U+f096-f097,U+f0a2,U+f0e4-f0e6,U+f0ec-f0ee,U+f0f5-f0f7,U+f10c,U+f112,U+f114-f115,U+f11d,U+f123,U+f132,U+f145,U+f147-f149,U+f14c,U+f166,U+f16a,U+f172,U+f175-f178,U+f18e,U+f190,U+f196,U+f1b1,U+f1d9,U+f1db,U+f1f7,U+f20c,U+f219,U+f230,U+f24a,U+f250,U+f278,U+f27b,U+f283,U+f28c,U+f28e,U+f29b-f29c,U+f2b7,U+f2ba,U+f2bc,U+f2be,U+f2c0,U+f2c3,U+f2d3-f2d4}</style>
+        <link rel="apple-touch-icon" href="/logo192.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="manifest" href="/manifest.json">
+        <script>!function(e,t,n,o,a,c,f){e.fbq||(a=e.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},e._fbq||(e._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],(c=t.createElement(n)).async=!0,c.src="https://connect.facebook.net/en_US/fbevents.js",(f=t.getElementsByTagName(n)[0]).parentNode.insertBefore(c,f))}(window,document,"script"),fbq("init","1770705629811317"),fbq("track","PageView"),fbq("track","CompleteRegistration")</script>
+        <title>Zuri.Training.Team</title>
+    
+    </head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <div id="root" >
+        <div class="Navigation" >
+            <header>
+                <div class="container" >
+                    <nav class="navbar navbar-expand-lg narbar-light navigation py-5 px-1">
+                        <a class="navbar-brand" href="/">
+                            <img src="./images/brand.png" alt="logo">
+                        </a>
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars" aria-hidden="true" style="color: rgb(231, 51, 43);"></i>
+                            
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                    <a aria-current="page" class="nav-link ml-lg-3 activeLink" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ml-lg-3" href="#">Curriculum</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ml-lg-3" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn mt-3 mt-lg-0 h-btn px-4 text-white" role="button" href="/enrollment">Join Zuri Training</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav> 
+                </div>
+            </header>
+        </div>
+        <div class="home-page" >
+            <section class="headerBg">
+                <div class="container">
+                    <div class="row pb-5">
+                        <div id="centered" class=" col-md-5">
+                            <h4 class=" headerH4">Gain enough knowledge to help scale through the tech industry for free.</h4>
+                            <p class="pt-3 pb-5 header">Basic introduction to software development and design aimed at complete beginners which anyone can join. Each week you'll be given course content, have opportunity to attend live classes and work on tasks to help you understand each topic better... <a href="https://zuri.team/articles/zuri-beginner-tech-training-a-beginner-training-focused-on-those-who-are-complete-tech-novices-or-just-beginners" class="small link-faint" target="__blank">Read More</a><br><br><strong>Powered by:</strong> <br>  <a href="https://ingressive.org/" target="__blank"><img src="https://ingressive.org/wp-content/uploads/2020/05/I4G-Logo-Color-Cropped.png" width="50%"></a></p>
+                            <div>
+                                <button type="button" name="button" class="rounded-0 pl-3 headerBtn pr-3 pt-2 pb-2 border-0"><a class="headerTag" href="/enrollment">Enroll Today</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt-5 pb-5 ml-5 d-flex justify-content-end aos-init aos-animate">
+                            <div id="none" class="col custom-col-6 top-offset">
+                                <img src="./images/img1.jpg" class="flyin-topleft img-fluid" alt="homepage1"><img src="./images/img2.1.jpg" class="flyin-left img-fluid" alt="homepage2">
+                            </div>
+                            <div id="none" class="col custom-col-6"><img src="./images/imag3.jpg" class="flyin-top img-fluid" alt="homepage3"><img src="./images/img4.jpg" class=" img-fluid" alt="homepage4"><img src="./images/img5.jpg" class="flyin-bottom img-fluid" alt="homepage5">
+                            </div>
+                            <div id="none" class="col custom-col-6 top-offset"><img src="./images/img6.jpg" class="flyin-right img-fluid" alt="homepage6"><img src="./images/img7.jpg" class="flyin-bottomright img-fluid" alt="homepage7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container pb-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="pt-5 pb-2 red" style="font-size: 14px;">WHY ZURI TRAINING</p>
+                            <h5 class="pb-2 pp">At Zuri Training, you gain access to enough knowledge to introduce and aid your success in the tech industry.</h5>
+                            <p style="font-size: 16px; color: rgb(81, 73, 73);">The program is a 4-month long program aimed at getting you started in the industry. We understand it is impossible to become an expert at anything in just 4 months. However, we promise to give you everything you need to get started.</p>
+                        </div>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide mobile aos-init" data-ride="carousel" data-aos="fade-up" data-aos-duration="2000">
+                        <div>
+                            <div class="main-carousel flickity-enabled is-draggable" data-flickity="{ &quot;center-left&quot;: true ,&quot;autoPlay&quot;:true, &quot;contain&quot;: true, &quot;groupCells&quot;: true  }" tabindex="0">
+                                <div class="flickity-viewport" style="height: 0px; touch-action: pan-y;">
+                                    <div class="flickity-slider" style="left: 0px; transform: translateX(-858.92%);">
+                                        <div class="carousel-cell" style="position: absolute; left: 0%;" aria-hidden="true">
+                                            <div class="card" style="width: 20em;">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-laptop" aria-hidden="true"></i>
+                                                    <div class="card-body "><p class="card-title">Fully Remote</p>
+                                                        <p class="card-title">100% online classes available to anyone in the world</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell" style="position: absolute; left: 165.26%;" aria-hidden="true">
+                                            <div class="card" style="width: 20em; background-color: rgb(242, 235, 233);">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                                    <div class="card-body "><p class="card-title">Hands-on Experience</p>
+                                                        <p class="card-title">We don't just teach you theory, we show you how to build things</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell" style="position: absolute; left: 330.52%;" aria-hidden="true">
+                                            <div class="card" style="width: 20em; background-color: rgb(220, 244, 248);">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                                    <div class="card-body "><p class="card-title">Collaborative Learning</p>
+                                                        <p class="card-title">We connect you with like minds to grow together</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell" style="position: absolute; left: 495.77%;" aria-hidden="true">
+                                            <div class="card" style="width: 20em; background-color: rgb(255, 227, 225);">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-atom" aria-hidden="true"></i>
+                                                    <div class="card-body ">
+                                                        <p class="card-title">Real-life Projects</p>
+                                                        <p class="card-title">We give CV worthy projects to help you hit the ground running</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell" style="position: absolute; left: 661.03%;" aria-hidden="true">
+                                            <div class="card" style="width: 20em; background-color: rgb(240, 220, 248);">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-user" aria-hidden="true"></i>
+                                                    <div class="card-body ">
+                                                        <p class="card-title">Beginner Friendly</p>
+                                                        <p class="card-title">We provide step-by-step procedures on how to get things done</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell is-selected" style="position: absolute; left: 826.29%;">
+                                            <div class="card" style="width: 20em; background-color: rgb(239, 255, 244);">
+                                                <div class="pt-4 pl-3 pb-5"><i class="fa fa-users" aria-hidden="true"></i>
+                                                    <div class="card-body ">
+                                                        <p class="card-title">Mentorship</p>
+                                                        <p class="card-title">During and after the program you have access to experience seniors.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button>
+                                <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next" disabled=""><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
+                                <ol class="flickity-page-dots">
+                                    <li class="dot" aria-label="Page dot 1"></li>
+                                    <li class="dot" aria-label="Page dot 2"></li>
+                                    <li class="dot" aria-label="Page dot 3"></li>
+                                    <li class="dot" aria-label="Page dot 4"></li>
+                                    <li class="dot" aria-label="Page dot 5"></li>
+                                    <li class="dot is-selected" aria-label="Page dot 6" aria-current="step"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container pt-5 pl-3 pr-3 mobile">
+                        <button type="button" name="button" class="rounded-0 carouselBtn pl-3 pr-3 pt-2 pb-2 border-0"><a class="headerTag" href="/curriculum">View Curriculum</a></button>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div id="desktop" class="row pt-5 pb-5 aos-init" data-aos="fade-down" data-aos-duration="2000">
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%;">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-laptop" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Fully Remote</p>
+                                        </div><div class="card-hover-content">
+                                            <p class="card-title">100% online classes available to anyone in the world</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%; background-color: rgb(242, 235, 233);">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Hands-on Experience</p>
+                                        </div><div class="card-hover-content">
+                                            <p class="card-title">We don't just teach you theory, we show you how to build things</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%; background-color: rgb(220, 244, 248);">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Collaborative Learning</p>
+                                        </div>
+                                        <div class="card-hover-content">
+                                            <p class="card-title">We connect you with like minds to grow together</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%; background-color: rgb(255, 227, 225);">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-atom" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Real-life Projects</p>
+                                        </div>
+                                        <div class="card-hover-content">
+                                            <p class="card-title">We give CV worthy projects to help you hit the ground running</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%; background-color: rgb(240, 220, 248);">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Beginner Friendly</p>
+                                        </div>
+                                        <div class="card-hover-content">
+                                            <p class="card-title">We provide step-by-step procedures on how to get things done</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pt-2 card-container">
+                                    <div class="card" style="width: 100%; background-color: rgb(239, 255, 244);">
+                                        <div class="pt-4 pl-3 pb-5">
+                                            <i class="fa fa-users" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">Mentorship</p>
+                                        </div>
+                                        <div class="card-hover-content">
+                                            <p class="card-title">During and after the program you have access to experience seniors.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="container pt-5 pl-3 pr-3">
+                                        <button type="button" name="button" class="rounded-0 carouselBtn pl-3 pr-3 pt-2 pb-2 border-0">
+                                            <a class="headerTag" href="/curriculum">View Curriculum</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="background-color: rgb(242, 235, 233);">
+                    <div class="container pb-4">
+                        <div class="row">
+                            <div class="col-md-12 pb-3">
+                                <p class="pt-5 red">SCOPE OF PROGRAM</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="sectP pp">Here is the list of areas that will be explored in<br> training.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="desktop3">
+                                    <div class="container d-flex justify-content-end p-0">
+                                        <button type="button" name="button" class="rounded-0 sectBtn pl-3 pr-3 pt-2 pb-2 border-0">
+                                            <a class="sectTag" href="/enrollment">Enroll Today</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="carouselExampleIndicators" class="carousel slide mobile aos-init" data-ride="carousel" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="main-carousel flickity-enabled is-draggable" data-flickity="{ &quot;center-left&quot;: true ,&quot;autoPlay&quot;:true, &quot;contain&quot;: true, &quot;groupCells&quot;: true  }" tabindex="0">
+                                <div class="flickity-viewport" style="height: 0px; touch-action: pan-y;">
+                                    <div class="flickity-slider" style="left: 0px; transform: translateX(-858.92%);">
+                                        <div class="carousel-cell active is-selected" style="position: absolute; left: 0%;">
+                                            <div class="card" style="width: 20rem;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Frontend Development</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                                    </div>
+                                                    <p class="card-text pt-3">This track deals with the aspect of your application that the users interact with. A front-end developer will be able to correctly interpret a given design to the user interface. </p>
+                                                    <img width="100%" src="./images/brand.png" alt="vector-1">
+                                                    <p class="pt-2 cardpfontsize">HTML | CSS | Javascript</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell active" style="position: absolute; left: 165.26%;" aria-hidden="true">
+                                            <div class="card" style="width: 20rem;"><div class="card-body"><div style="display: flex;">
+                                                <h5 class="card-title" style="font-size: 18px;">Backend Development</h5>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                            </div>
+                                            <p class="card-text pt-3">This  track deals with the aspect of the application the user does not directly interact with. It allows the frontend function either by running some back-end code or connecting to the database.</p>
+                                            <img width="100%" src="./images/brand.png" alt="vector-1">
+                                            <p class="pt-2 cardpfontsize">PHP | Python | JavaScript</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell active" style="position: absolute; left: 330.52%;" aria-hidden="true">
+                                    <div class="card" style="width: 20rem;">
+                                        <div class="card-body">
+                                            <div style="display: flex;">
+                                                <h5 class="card-title" style="font-size: 18px;">Design</h5>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                            </div><p class="card-text pt-3">This track deals with creating a graphic plan for an application. You will learn to convert project documentation into viewable and understandable graphic design for the developers to work with</p>
+                                            <img width="100%" src="./images/dotline.png" alt="vector-1"><p class="pt-2 cardpfontsize">UI | UX | Graphics Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell active" style="position: absolute; left: 495.77%;" aria-hidden="true">
+                                    <div class="card" style="width: 20rem;">
+                                        <div class="card-body">
+                                            <div style="display: flex;">
+                                                <h5 class="card-title" style="font-size: 18px;">Mobile Development</h5>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                            </div>
+                                            <p class="card-text pt-3">The mobile track contains a list of tools and languages needed for a developer to create mobile applications. A mobile application can be IOS or Android. </p>
+                                            <img width="100%" src="./images/dotline.png" alt="vector-1"><p class="pt-2 cardpfontsize">Java | Flutter | Kotlin</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell active" style="position: absolute; left: 661.03%;" aria-hidden="true">
+                                    <div class="card" style="width: 20rem;">
+                                        <div class="card-body">
+                                            <div style="display: flex;">
+                                                <h5 class="card-title" style="font-size: 18px;">Cloud</h5>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;">
+                                                </i>
+                                            </div>
+                                            <p class="card-text pt-3">The cloud track is an extension of the backend track. It involves cloud tools that’ll allow the participant to develop in the cloud using AWS or Azure cloud services</p><img width="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUMAAAACCAYAAADCQL56AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAuSURBVHgB7cOxDQBABEBREpVCcUuZ4PYfQ6NgD/8lT3/mEwC4LKKs3VUA4DDbA6JlAyPGrO/UAAAAAElFTkSuQmCC" alt="vector-1"><p class="pt-2 cardpfontsize">AWS | Azure</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell active" style="position: absolute; left: 826.29%;" aria-hidden="true">
+                                    <div class="card" style="width: 20rem;">
+                                        <div class="card-body">
+                                            <div style="display: flex;">
+                                                <h5 class="card-title" style="font-size: 18px;">Frameworks</h5>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                            </div>
+                                            <p class="card-text pt-3">During the program we will be exploring several useful frameworks to give you an edge in the industry and help you develop complex applications much faster</p><img width="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUMAAAACCAYAAADCQL56AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAuSURBVHgB7cOxDQBABEBREpVCcUuZ4PYfQ6NgD/8lT3/mEwC4LKKs3VUA4DDbA6JlAyPGrO/UAAAAAElFTkSuQmCC" alt="vector-1"><p class="pt-2 cardpfontsize">Laravel | ReactJS | Django</p></div></div></div></div></div><button class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous" disabled=""><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button>
+                                            <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
+                                            <ol class="flickity-page-dots"><li class="dot is-selected" aria-label="Page dot 1" aria-current="step"></li><li class="dot" aria-label="Page dot 2"></li><li class="dot" aria-label="Page dot 3"></li><li class="dot" aria-label="Page dot 4"></li>
+                                                <li class="dot" aria-label="Page dot 5"></li>
+                                                <li class="dot" aria-label="Page dot 6"></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="mobile">
+                                        <div class="container pt-5 pl-3 pr-3 d-flex justify-content-center">
+                                            <button type="button" name="button" class="rounded-0 carouselBtn pl-3 pr-3 pt-2 pb-2 border-0">
+                                                <a href="/curriculum">View Curriculum</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-5" id="desktop2">
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Frontend Development</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;">
+                                                        </i>
+                                                    </div>
+                                                    <p class="card-text pt-3">This track deals with the aspect of your application that the users interact with. A front-end developer will be able to correctly interpret a given design to the user interface. </p>
+                                                    <img width="100%" src="./images/dotline.png">HTML | CSS | Javascript</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Backend Development</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                                    </div>
+                                                    <p class="card-text pt-3">This  track deals with the aspect of the application the user does not directly interact with. It allows the frontend function either by running some back-end code or connecting to the database.</p>
+                                                    <img width="100%" src="./images/dotline.png" alt="vector-11">
+                                                    <p class="pt-2 cardpfontsize">PHP | Python | JavaScript</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Design</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                                    </div>
+                                                    <p class="card-text pt-3">This track deals with creating a graphic plan for an application. You will learn to convert project documentation into viewable and understandable graphic design for the developers to work with</p>
+                                                    <img width="100%" src="./images/dotline.png">UI | UX | Graphics Design</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Mobile Development</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;"></i>
+                                                    </div>
+                                                    <p class="card-text pt-3">The mobile track contains a list of tools and languages needed for a developer to create mobile applications. A mobile application can be IOS or Android. </p>
+                                                    <img width="100%" src="./images/dotline.png" alt="vector-11">
+                                                    <p class="pt-2 cardpfontsize">Java | Flutter | Kotlin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Cloud</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;">
+                                                        </i>
+                                                    </div>
+                                                    <p class="card-text pt-3">The cloud track is an extension of the backend track. It involves cloud tools that’ll allow the participant to develop in the cloud using AWS or Azure cloud services</p>
+                                                    <img width="100%" src="./images/dotline.png">AWS | Azure</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pt-5 d-flex justify-content-center">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <div style="display: flex;">
+                                                        <h5 class="card-title" style="font-size: 18px;">Frameworks</h5>
+                                                        <i class="fa fa-thumb-tack" aria-hidden="true" style="margin-left: auto;">
+                                                        </i>
+                                                    </div>
+                                                    <p class="card-text pt-3">During the program we will be exploring several useful frameworks to give you an edge in the industry and help you develop complex applications much faster</p>
+                                                    <img width="100%" src="./images/dotline.png" alt="vector-11"><p class="pt-2 cardpfontsize">Laravel | ReactJS | Django</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="mt-5 enroll">
+                                <div class="container mb-5 enroll-child">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <div class="bg mx-auto">
+                                                <h3 class="mb-5 text-white">Break into the tech industry like a Pro</h3>
+                                                <button type="button" name="button" class="rounded-0 pl-3 headerBtn pr-3 pt-2 pb-2 border-0">
+                                                    <a class="headerTag" href="/enrollment">Enroll Today</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+            </section>
+        </div>
+        <div>
+            <footer class="footer mt-5 d-none d-md-block">
+                <div class="container footerContainer ">
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-between">
+                                <div class="logo">
+                                    <a class="logo" href="/"><img src="./images/dotline.png" alt="logo"></a>
+                                </div>
+                                <div class=" ">
+                                    <h5 class="font-weight-bold">Quick links</h5>
+                                    <div class="d-flex justify-content-end">
+                                        <ul class="nav nav-pills flex-column mr-5   mt-1">
+                                            <li class="nav-item"><a class="nav-link p-0 " href="#">Home</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0" href="#">Curriculum</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0 " href="#">FAQ</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0" href="#">Terms and Conditions</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Connect with us</h5>
+                                    <p class=" mt-3"><a href="mailto:training@zuri.team" class="text-dark" target="__blank">Email</a>
+                                        <a href="https://zuri.team/articles/" class="text-dark d-block" target="__blank">Blog</a>
+                                        <a href="https://zuri.team/store/" class="text-dark d-block" target="__blank">Store</a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Office Address</h5>
+                                    <p class=" mt-3">8 Jubliee-CMD Road, <br> Magodo, Lagos State</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Follow us</h5>
+                                    <div class="mt-3">
+                                        <a href="https://facebook.com/thezuriteam" class="text-decoration-none inline-block mr-3" target="__blank">
+                                            <img src="./images/fb.png" alt="facebook-icon">
+                                        </a>
+                                        <a href="https://twitter.com/theZuriTeam" class="text-decoration-none inline-block mr-3 " target="__blank">
+                                            <img src="./images/twitter.png" alt="social-icon">
+                                        </a>
+                                        <a href="https://www.instagram.com/thezuriteam/" class="text-decoration-none inline-block mr-3 " target="__blank">
+                                            <img src="./images/IG.png" alt="social-icon">
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UCCZYGgIn2X1I8mortBJ5UUw" class="text-decoration-none inline-block mr-3" target="__blank">
+                                            <img src="./images/in.png" alt="social-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-bottom">
+                                <div class="col-12 py-2 text-center">
+                                    <p class="footer-copyright">© 2021 Zuri Training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+           </div>
+    </div>
+    <script>!function(e){function t(t){for(var n,l,a=t[0],f=t[1],i=t[2],c=0,s=[];c<a.length;c++)l=a[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in f)Object.prototype.hasOwnProperty.call(f,n)&&(e[n]=f[n]);for(p&&p(t);s.length;)s.shift()();return u.push.apply(u,i||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,a=1;a<r.length;a++){var f=r[a];0!==o[f]&&(n=!1)}n&&(u.splice(t--,1),e=l(l.s=r[0]))}return e}var n={},o={1:0},u=[];function l(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,l),r.l=!0,r.exports}l.m=e,l.c=n,l.d=function(e,t,r){l.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,t){if(1&t&&(e=l(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(l.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)l.d(r,n,function(t){return e[t]}.bind(null,n));return r},l.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(t,"a",t),t},l.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},l.p="/";var a=this["webpackJsonpstart-ng"]=this["webpackJsonpstart-ng"]||[],f=a.push.bind(a);a.push=t,a=a.slice();for(var i=0;i<a.length;i++)t(a[i]);var p=f;r()}([])</script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/typed.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

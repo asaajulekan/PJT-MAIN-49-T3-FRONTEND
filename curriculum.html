@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png" sizes="16x16" type="image/pn">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://kit.fontawesome.com/5760397bba.js" crossorigin="anonymous"></script>
+    <style media="all" id="fa-v4-font-face">
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");
+            unicode-range: U+f004-f005, U+f007, U+f017, U+f022, U+f024, U+f02e, U+f03e, U+f044, U+f057-f059, U+f06e, U+f070, U+f075, U+f07b-f07c, U+f080, U+f086, U+f089, U+f094, U+f09d, U+f0a0, U+f0a4-f0a7, U+f0c5, U+f0c7-f0c8, U+f0e0, U+f0eb, U+f0f3, U+f0f8, U+f0fe, U+f111, U+f118-f11a, U+f11c, U+f133, U+f144, U+f146, U+f14a, U+f14d-f14e, U+f150-f152, U+f15b-f15c, U+f164-f165, U+f185-f186, U+f191-f192, U+f1ad, U+f1c1-f1c9, U+f1cd, U+f1d8, U+f1e3, U+f1ea, U+f1f6, U+f1f9, U+f20a, U+f247-f249, U+f24d, U+f254-f25b, U+f25d, U+f271-f274, U+f279, U+f28b, U+f28d, U+f2b5-f2b6, U+f2b9, U+f2bb, U+f2bd, U+f2c1-f2c2, U+f2d0, U+f2d2, U+f2dc, U+f2ed, U+f3a5, U+f3d1, U+f410
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");
+            unicode-range: U+f003, U+f006, U+f014, U+f016, U+f01a-f01b, U+f01d, U+f040, U+f045-f047, U+f05c-f05d, U+f07d-f07e, U+f087-f088, U+f08a-f08b, U+f08e, U+f090, U+f096-f097, U+f0a2, U+f0e4-f0e6, U+f0ec-f0ee, U+f0f5-f0f7, U+f10c, U+f112, U+f114-f115, U+f11d, U+f123, U+f132, U+f145, U+f147-f149, U+f14c, U+f166, U+f16a, U+f172, U+f175-f178, U+f18e, U+f190, U+f196, U+f1b1, U+f1d9, U+f1db, U+f1f7, U+f20c, U+f219, U+f230, U+f24a, U+f250, U+f278, U+f27b, U+f283, U+f28c, U+f28e, U+f29b-f29c, U+f2b7, U+f2ba, U+f2bc, U+f2be, U+f2c0, U+f2c3, U+f2d3-f2d4
+        }
+    </style>
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <script>
+        ! function (e, t, n, o, a, c, f) {
+            e.fbq || (a = e.fbq = function () {
+                a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+            }, e._fbq || (e._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], (c = t
+                .createElement(n)).async = !0, c.src = "https://connect.facebook.net/en_US/fbevents.js", (f = t
+                .getElementsByTagName(n)[0]).parentNode.insertBefore(c, f))
+        }(window, document, "script"), fbq("init", "1770705629811317"), fbq("track", "PageView"), fbq("track",
+            "CompleteRegistration")
+    </script>
+    <title>Zuri.Training.Team</title>
+
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <div class="root">
+        <div class="Navigation">
+            <header>
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg narbar-light navigation py-5 px-1">
+                        <a class="navbar-brand" href="/">
+                            <img src="./images/brand.png" alt="logo">
+                        </a>
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fas fa-bars" aria-hidden="true" style="color: rgb(231, 51, 43);"></i>
+
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                    <a aria-current="page" class="nav-link ml-lg-3 activeLink" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ml-lg-3" href="curriculum.html">Curriculum</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ml-lg-3" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn mt-3 mt-lg-0 h-btn px-4 text-white" role="button"
+                                        href="enrollment.html">Join Zuri Training</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <section class="curriculumTopHeading">
+            <div class="text-center heading-title">
+                <p class="d-block  curriculumHeading1">PROGRAM CURRICULUM</p>
+                <p class="d-block curriculumHeading2">Gain enough knowledge to help you get <br> started in the tech
+                    industry for free</p>
+            </div>
+        </section>
+        <section class="container curriculumContainer  d-none d-md-block d-sm-block">
+            <div class="row">
+                <div class="col-md-12 col-12 justify-content-end c-pr-6 d-flex mt-4"><span
+                        class="pr-3 c-date pt-2">Wednesday, 14th July, 2021</span>
+                    <div class="c-searchbox"><img class="img-fluid c-searchicon "
+                            src="./images/search-icon.svg" alt="Search">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container curriculumContainer mb-5">
+            <div class="row mx-auto" id="myAccordion">
+                <div class="col-lg-3 mt-2 d-block mx-auto">
+                    <div class="accordion">
+                        <div class="card border-0 mb-3">
+                            <div class="c-card-header card-header tab-links" id="headingTwo" data-toggle="collapse"
+                                data-target=" .collapseTwo">
+                                <h2 class="mb-0 d-flex justify-content-between"><small class="c-sub-title pt-2">
+                                        Frontend Development </small><i class="fa fa-angle-down c-angleIcon mt-2"
+                                        aria-hidden="true"></i></h2>
+                            </div>
+                            <div id="collapseTwo" class="collapseTwo collapse" aria-labelledby="headingTwo"
+                                data-parent="#myAccordion">
+                                <div class="card-b">
+                                    <ul class="list-unstyled">
+                                        <li class=" px-3 py-3  cu-list-div mt-2 pointer">HTML</li>
+                                        <li class="cu-list-div2 px-3 py-3 pointer">CSS</li>
+                                        <li class="cu-list-div3 px-3 py-3 pointer">Javascript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0 mb-3">
+                            <div class="c-card-header card-header" id="headingThree" data-toggle="collapse"
+                                data-target=".collapseThree ">
+                                <h2 class="mb-0 d-flex justify-content-between"><small class="c-sub-title pt-2">Backend
+                                        Development </small><i class="fa fa-angle-down c-angleIcon mt-2"
+                                        aria-hidden="true"></i></h2>
+                            </div>
+                            <div id="collapseThree" class="collapseThree collapse" aria-labelledby="headingThree"
+                                data-parent="#myAccordion">
+                                <div class="card-b">
+                                    <ul class="list-unstyled">
+                                        <li class="px-3 py-3 pointer cu-list-div mt-2">PHP</li>
+                                        <li class="cu-list-div3 px-3 py-3 pointer">Python</li>
+                                        <li class="cu-list-div2 px-3 py-3 pointer">JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0 mb-3">
+                            <div class="c-card-header card-header  tab-links" id="headingOne" data-toggle="collapse"
+                                data-target=".collapseOne">
+                                <h2 class="mb-0 d-flex justify-content-between"><small class="c-sub-title pt-2"> UI/UX
+                                        Design </small><i class="fa fa-angle-down c-angleIcon mt-2"
+                                        aria-hidden="true"></i></h2>
+                            </div>
+                        </div>
+                        <div class="card border-0 mb-3">
+                            <div class="c-card-header card-header " id="headingFour" data-toggle="collapse"
+                                data-target=".collapseFour">
+                                <h2 class="mb-0 d-flex justify-content-between"><small class="c-sub-title pt-2">Mobile
+                                        Development </small><i class="fa fa-angle-down c-angleIcon mt-2"
+                                        aria-hidden="true"></i></h2>
+                            </div>
+                            <div id="collapseFour" class="collapseFour collapse" aria-labelledby="headingFour"
+                                data-parent="#myAccordion">
+                                <div class="card-b border-0">
+                                    <ul class="list-unstyled">
+                                        <li class="px-5 py-3 cu-list-div mt-2 pointer">Java</li>
+                                        <li class="cu-list-div3 px-5 py-3 pointer">Flutter</li>
+                                        <li class="cu-list-div2 px-5 py-3 pointer">Kotlin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-12 mb-5">
+                    <div class=" c-home32-cont tab-content mt-2">
+                        <h3 class="text-center c-track-title mt-4">View Curriculums By Tracks</h3>
+                        <p class="c-track-text text-center my-3">These are some of the topics that'll be taught during
+                            the program. Note that this is not an exhaustive list.</p>
+                    </div>
+                    <div class=" tabcontent collapseTwo collapse " id="headingTwo" data-parent="#myAccordion">
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">1. HTML Elements</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">2. HTML Tags</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">3. HTML Attributes</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">4. HTML Comments (Recognising processor specific instructions
+                                “!”)</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">5. Images in HTML (Responsive Images using HTML5 capabilities
+                                [srcset attribute and picture element]).</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">6. HTML Links (External and Bookmarks)</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">7. Nesting HTML Elements</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">8. Images as Links</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">9. HTML List</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">10. HTML Form Handling (Validation using HTML5 and CSS3)</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">11. HTML Meta-data</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">12. Minification</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">13. Caching</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">14. Canvas</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">15. SVG</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">16. Video</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">17. Audio</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">18. Geolocation</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">19. Web Storage</p>
+                        </div>
+                    </div>
+                    <div class="tabcontent collapseThree collapse " id="headingThree" data-parent="#myAccordion">
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">1. Introduction</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">2. Hello, World!</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">3. Setup Node.js Development Environment</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">4. Primitive Types</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">5. Loose Typing</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">6. Object Literal</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">7. Functions</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">8. Buffer</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">9. Working with ExpressJS</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">10. Creating and deploying REST API</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">11. Working with MongoDB</p>
+                        </div>
+                    </div>
+                    <div class="tabcontent collapseOne collapse " id="headingOne" data-parent="#myAccordion">
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">1. User Interface design conventions </p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">2. The User data-model, communicating and reinforcing.</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">3. Navigation models and principles.</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">4. Working with a development team – Agile</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">5. Development and Managing Sprints</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">6. Design prototyping - Figma</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">7. Usability Testing</p>
+                        </div>
+                    </div>
+                    <div class=" tabcontent collapse collapseFour" id="headingFour" data-parent="#myAccordion">
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">1. Hello, World!</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">2. Variables and Types</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">3. Conditionals</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">4. Arrays</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">5. Loops</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">6. Functions</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">7. Objects</p>
+                        </div>
+                        <div class="c-home32-cont">
+                            <p class="c-course-title mb-0">8. Compiling and Running with Arguments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <footer class="footer mt-5 d-none d-md-block">
+                <div class="container footerContainer ">
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-between">
+                                <div class="logo"><a class="logo" href="/"><img
+                                            src="./images/zuri-logo.svg"
+                                            alt="logo"></a>
+                                </div>
+                                <div class=" ">
+                                    <h5 class="font-weight-bold">Quick links</h5>
+                                    <div class="d-flex justify-content-end">
+                                        <ul class="nav nav-pills flex-column mr-5   mt-1">
+                                            <li class="nav-item"><a class="nav-link p-0 " href="training.html">Home</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0"
+                                                    href="curriculum">Curriculum</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0 " href="faq">FAQ</a></li>
+                                            <li class="nav-item"><a class="nav-link p-0" href="terms-conditions">Terms
+                                                    and Conditions</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Connect with us</h5>
+                                    <p class=" mt-3"><a href="mailto:training@zuri.team" class="text-dark"
+                                            target="__blank">Email</a><a href="https://zuri.team/articles/"
+                                            class="text-dark d-block" target="__blank">Blog</a><a
+                                            href="https://zuri.team/store/" class="text-dark d-block"
+                                            target="__blank">Store</a></p>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Office Address</h5>
+                                    <p class=" mt-3">8 Jubliee-CMD Road, <br> Magodo, Lagos State</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold">Follow us</h5>
+                                        <div class="mt-3">
+                                            <a href="https://facebook.com/thezuriteam"
+                                                class="text-decoration-none inline-block mr-3" target="__blank">
+                                                <img src="./images/fb.png" alt="facebook-icon">
+                                            </a>
+                                            <a href="https://twitter.com/theZuriTeam"
+                                                class="text-decoration-none inline-block mr-3 " target="__blank">
+                                                <img src="./images/twitter.png" alt="social-icon">
+                                            </a>
+                                            <a href="https://www.instagram.com/thezuriteam/"
+                                                class="text-decoration-none inline-block mr-3 " target="__blank">
+                                                <img src="./images/IG.png" alt="social-icon">
+                                            </a>
+                                            <a href="https://www.youtube.com/channel/UCCZYGgIn2X1I8mortBJ5UUw"
+                                                class="text-decoration-none inline-block mr-3" target="__blank">
+                                                <img src="./images/in.png" alt="social-icon">
+                                            </a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="section-bottom">
+                                <div class="col-12 py-2 text-center">
+                                    <p class="footer-copyright">© 2021 Zuri Training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <footer class="d-md-none d-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row mobile-footer">
+                                <div class="col-6">
+                                    <h5 class="font-weight-bold">Quick links</h5>
+                                    <ul class="nav nav-pills flex-column mr-5   mt-3">
+                                        <li class="nav-item"><a class="nav-link p-0 " href="training.html">Home</a></li>
+                                        <li class="nav-item mt-1"><a class="nav-link p-0"
+                                                href="curriculum.html">Curriculum</a></li>
+                                        <li class="nav-item mt-1"><a class="nav-link p-0 " href="faq">FAQ</a></li>
+                                        <li class="nav-item mt-1"><a class="nav-link p-0" href="terms-conditions">Terms
+                                                and Conditions</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <h5 class="font-weight-bold">Connect with us</h5>
+                                        <p><a href="mailto:training@zuri.team" class="text-dark">Email</a><a
+                                                href="https://zuri.team/articles/" target="__blank"
+                                                class="text-dark d-block">Blog</a><a href="https://zuri.team/store/"
+                                                target="__blank" class="text-dark d-block">Store</a></p>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-weight-bold">Office Address</h5>
+                                        <p>8 Jubliee-CMD Road, <br> Magodo, Lagos State</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-6"><a class=" logo" href="/"><img
+                                            src="./images/zuri-logo.svg"
+                                            alt="logo"></a></div>
+                                <div class="col-6">
+                                     <h5 class="font-weight-bold">Follow us</h5>
+                                    <div class="mt-3">
+                                        <a href="https://facebook.com/thezuriteam"
+                                            class="text-decoration-none inline-block mr-3" target="__blank">
+                                            <img src="./images/fb.png" alt="facebook-icon">
+                                        </a>
+                                        <a href="https://twitter.com/theZuriTeam"
+                                            class="text-decoration-none inline-block mr-3 " target="__blank">
+                                            <img src="./images/twitter.png" alt="social-icon">
+                                        </a>
+                                        <a href="https://www.instagram.com/thezuriteam/"
+                                            class="text-decoration-none inline-block mr-3 " target="__blank">
+                                            <img src="./images/IG.png" alt="social-icon">
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UCCZYGgIn2X1I8mortBJ5UUw"
+                                            class="text-decoration-none inline-block mr-3" target="__blank">
+                                            <img src="./images/in.png" alt="social-icon">
+                                        </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="section-bottom">
+                                <div class="col-12 py-2 text-center">
+                                    <p class="footer-copyright">© 2021 Zuri Training. All Right Reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <script src="./lib/typed.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

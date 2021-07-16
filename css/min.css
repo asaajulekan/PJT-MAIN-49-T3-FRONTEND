@@ -1,0 +1,125 @@
+
+/* Intership pages */
+.hero {
+    color: #514949;
+    color: var(--text-color);
+    
+    
+}
+.hero h1 {
+    font-family: "Averta-Bold";
+    font-size: 2.2rem;
+    
+}
+.about {
+    background-color: #fefaff;
+    background-color: var(--about-BG);
+    color: #514949;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: .87rem;
+    
+}
+
+.banner a, .hero a, .scope a {
+    font-size: 1rem;
+    background-color: #e7332b;
+    background-color: var(--red);
+    color: #fff;
+    padding: .68rem 1.75rem;
+    border: 2px solid #e7332b;
+    border: 2px solid var(--red);
+    transition: all .1s ease-in-out;
+}
+
+
+
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}
+}
+@media (min-width: 992px){
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}
+}
+@media (min-width: 768px){
+.container, .container-md, .container-sm {
+    max-width: 720px;
+}
+}
+@media (min-width: 576px){
+.container, .container-sm {
+    max-width: 540px;
+}
+}
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1140px;
+}
+}
+@media (min-width: 992px){
+.container {
+    max-width: 960px;
+}
+}
+@media (min-width: 768px){
+.container {
+    max-width: 720px;
+}
+}
+@media (min-width: 576px){
+.container {
+    max-width: 540px;
+}
+}
+
+.navigation header {
+    background: #f7f3f2;
+}
+.navigation header {
+    transition: all .5s;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigation header {
+    background: rgb(247 243 242);
+}
+.navigation header {
+    background: rgba(242,235,233,.6);
+    width: 100%;
+}
+.about__link a:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+.about__link a {
+    color: #e7332b;
+    color: var(--red);
+    font-family: "Averta-SemiBold";
+}
+.about h3, .scope h3 {
+    color: #e7332b;
+    color: var(--red);
+    font-size: .87rem;
+    margin-bottom: 1rem;
+}
+
+
+.about h4, .scope h4 {
+    font-size: 2.12rem;
+    font-family: "Averta-Bold";
+}
+
+
+
+ strong {
+    font-weight: bolder;
+}
+

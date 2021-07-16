@@ -1335,7 +1335,60 @@ p {
 
 /* contact */
 
+.contact-header-body {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+}
+.contact-header-text, .contact-header-title {
+    font-family: "Averta-Regular";
+}
+.contact-form-asterik, .contact-header-title {
+    color: #e7332b;
+}
 
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.contact__form {
+    max-width: 600px;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active {
+    background-image: none;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    color: #e7332b;
+    background-color: #fff;
+}
+.btn:focus, .btn:hover {
+    text-decoration: none;
+}
+.btn {
+    outline: none!important;
+}
+.btn {
+    padding: 11px 28px;
+    font-size: 16px;
+}
+.contact-button {
+    background-color: #e7332b;
+    color: #fff;
+    border: 1px solid #e7332b;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
 .contact-header {
     background: rgba(242,235,233,.6);
     width: 100%;

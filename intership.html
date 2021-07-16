@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png" sizes="16x16" type="image/pn">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://kit.fontawesome.com/5760397bba.js" crossorigin="anonymous"></script>
+    <style media="all" id="fa-v4-font-face">
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");
+            unicode-range: U+f004-f005, U+f007, U+f017, U+f022, U+f024, U+f02e, U+f03e, U+f044, U+f057-f059, U+f06e, U+f070, U+f075, U+f07b-f07c, U+f080, U+f086, U+f089, U+f094, U+f09d, U+f0a0, U+f0a4-f0a7, U+f0c5, U+f0c7-f0c8, U+f0e0, U+f0eb, U+f0f3, U+f0f8, U+f0fe, U+f111, U+f118-f11a, U+f11c, U+f133, U+f144, U+f146, U+f14a, U+f14d-f14e, U+f150-f152, U+f15b-f15c, U+f164-f165, U+f185-f186, U+f191-f192, U+f1ad, U+f1c1-f1c9, U+f1cd, U+f1d8, U+f1e3, U+f1ea, U+f1f6, U+f1f9, U+f20a, U+f247-f249, U+f24d, U+f254-f25b, U+f25d, U+f271-f274, U+f279, U+f28b, U+f28d, U+f2b5-f2b6, U+f2b9, U+f2bb, U+f2bd, U+f2c1-f2c2, U+f2d0, U+f2d2, U+f2dc, U+f2ed, U+f3a5, U+f3d1, U+f410
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");
+            unicode-range: U+f003, U+f006, U+f014, U+f016, U+f01a-f01b, U+f01d, U+f040, U+f045-f047, U+f05c-f05d, U+f07d-f07e, U+f087-f088, U+f08a-f08b, U+f08e, U+f090, U+f096-f097, U+f0a2, U+f0e4-f0e6, U+f0ec-f0ee, U+f0f5-f0f7, U+f10c, U+f112, U+f114-f115, U+f11d, U+f123, U+f132, U+f145, U+f147-f149, U+f14c, U+f166, U+f16a, U+f172, U+f175-f178, U+f18e, U+f190, U+f196, U+f1b1, U+f1d9, U+f1db, U+f1f7, U+f20c, U+f219, U+f230, U+f24a, U+f250, U+f278, U+f27b, U+f283, U+f28c, U+f28e, U+f29b-f29c, U+f2b7, U+f2ba, U+f2bc, U+f2be, U+f2c0, U+f2c3, U+f2d3-f2d4
+        }
+    </style>
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <script>
+        ! function (e, t, n, o, a, c, f) {
+            e.fbq || (a = e.fbq = function () {
+                a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+            }, e._fbq || (e._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], (c = t
+                .createElement(n)).async = !0, c.src = "https://connect.facebook.net/en_US/fbevents.js", (f = t
+                .getElementsByTagName(n)[0]).parentNode.insertBefore(c, f))
+        }(window, document, "script"), fbq("init", "1770705629811317"), fbq("track", "PageView"), fbq("track",
+            "CompleteRegistration")
+    </script>
+    <title>Zuri.Training.Team</title>
+
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <div id="root">
+        <div class="navigation">
+            <header>
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light px-2"><a class="navbar-brand" href="/"><img
+                                src="./images/zuriInterlogo.svg" alt="brand logo" class="brand-logo"></a><button
+                            class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                            data-target="#navbarDropdown" aria-controls="NavbarDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation"><img src="./images/I4G-Logo-Color-Cropped.png"
+                                alt="dropdown menu"></button>
+                        <div class="collapse navbar-collapse" id="navbarDropdown">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a aria-current="page"
+                                        class="nav-link ml-lg-3 pb-1 activeLink" href="./intership.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="#">Curriculum</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="#">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="#">Contact</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link nav-button btn mt-3 ml-lg-4 mt-lg-0 h-btn px-4 text-white"
+                                        href="#">Enroll</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div>
+            <section class="hero my-5">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class=" col-12 col-lg-6 my-2">
+                            <h1 class="pt-1 pt-xl-5 pb-4"> Sign up for HNG Internship 8 - Operated by Zuri. </h1>
+                            <p class="pb-3 text-sm"> "HNG Internship is a long running, large scale virtual internship
+                                for
+                                people learning to code and design. It focuses on the post-training phase, and creates a
+                                virtual work environment for participants. It is fast paced and challenging, and helps
+                                people learn how to work in teams, deal with pressure and quickly expand their
+                                knowledge."</p>
+                            <div class="my-5 my-xl-5">
+                                <a href="#">Enroll Now</a>
+                            </div>
+                            <p>
+                                <br><strong>In Partnership with:</strong><br><img
+                                    src="./images/I4G-Logo.png" width="60%"
+                                    alt="Ingressive for good logo">
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-5 ml-auto text-center">
+                            <img class="img-fluid" src="./images/devs.png" alt="Banner Rep" width="180%" height="500px">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="about my-4 py-0 py-lg-5 ">
+                <div class="container">
+                    <h3 class="text-uppercase mt-2"> About Zuri Internship </h3>
+                    <h4 class="mb-lg-3 mb-0 "> "Zuri Internship runs internships that are designed to surface the very
+                        best of candidates out of a large pool of participants." </h4>
+                    <div class="row pt-5 pb-lg-5 pb-0 ">
+                        <div class="col-12 col-lg-6 mr-auto text-center text-lg-left ">
+                            <img src="./images/ldimg1.png" class="img-fluid " alt="About Zuri one">
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex align-items-end">
+                            <div>
+                                <h2 class="mb-4 mt-4 mt-lg-0">How the program runs</h2>
+                                <p>There are 10 stages, you are required to complete all the 10 stages (which becomes
+                                    increasingly more difficult as you go higher), after which you become Finalist.
+                                    Being a finalist is a mark of honour - it shows that you have grit, perseverance,
+                                    and can solve various problems successfully. <br><br>The program is designed to
+                                    surface the very best of candidates - that means that even though an unlimited
+                                    number of people can start, only a small percentage of those who start will complete
+                                    the program. Typically, this is less than 10%. <br><br>A finalist is someone we can
+                                    firmly recommend to any company for employment - because they have shown that they
+                                    have what it takes.</p>
+                                <div class="about__link  mt-1 mt-lg-5">
+                                    <a href="/enrollment">Enroll Now <img src="./images/a-head.svg"
+                                            alt="right arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-5 pb-lg-5 pb-0 ">
+                        <div class="col-12 col-lg-6 d-flex align-items-end order-2 order-lg-1">
+                            <div>
+                                <h2 class="mb-4 mt-4 mt-lg-0">Who Should Apply</h2>
+                                <p class="pr-0 pr-lg-5">Each Internship cohort is slightly different, even though we
+                                    follow the same basic pattern. The current iteration is a follow-on phase for the
+                                    ZurixIngressive Training, as well as the Reskill Americans training. It is open to
+                                    everyone to join, but <strong>requires a bit of pre-knowledge. </strong><br><br>
+                                    <ul>
+                                        <li>If you have prior coding or design skills / knowledge</li>
+                                        <li>If you are a professional looking to connect with others</li>
+                                        <li>If you are looking for a challenge </li>
+                                    </ul>The internship is a fun-filled experience that runs like a game, join us, and
+                                    we promise you'll come out better, even if you're unable to complete the program.
+                                </p>
+                                <div class="about__link  mt-1 mt-lg-5"><a href="/enrollment">Enroll Now <img
+                                            src="./images/a-head.svg" alt="row"></a></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mr-auto text-lg-left text-center order-1 order-lg-2 "><img
+                                src="./images/Idimg2.png" class="img-fluid " alt="About Zuri two"></div>
+                    </div>
+                    <div class="row pt-5 pb-5 ">
+                        <div class="col-12 col-lg-6 mr-auto text-lg-left text-center"><img src="./images/Idimg3.png"
+                                class="img-fluid " alt="About Zuri three"></div>
+                        <div class="col-12 col-lg-6 d-flex align-items-end">
+                            <div>
+                                <h2 class="mb-4 mt-4 mt-lg-0">Grow your portfolio</h2>
+                                <p>We allow anybody and everybody to enter the workspace. The workspace will have more
+                                    than 10,000 people active in it at the beginning. There are 10 stages - and as you
+                                    progress, those who do not make it through are removed from the workspace. <br>The
+                                    first three stages are a basic filter stage. <br><br>
+                                    <p>You will be given tasks that are more focused with real world experiences. They
+                                        typically involve a real world task which aims at identifying the most
+                                        committed/driven interns and helping them harness their skills better.</p>We
+                                    also give rewards as you deliver on tasks. Rewards are usually in difference forms
+                                    including cash and premium courses.
+                                </p>
+                                <div class="about__link  mt-1 mt-lg-5"><a href="#">Enroll Now <img
+                                            src="./images/a-head.svg" alt="row"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="scope my-5">
+                <div class="container">
+                    <h3 class="text-uppercase mt-2"> Scope of the program </h3>
+                    <div
+                        class="d-flex justify-content-between flex-column flex-lg-row  align-items-start align-items-lg-center mb-5 pb-0 pb-xl-5 ">
+                        <h2 class="mb-4 mb-lg-0">These are the tracks available in the Internship</h2><a
+                            href="/curriculum"> View Curriculm </a>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-6 col-lg-6 col-xl-4 col-12">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__1 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> Frontend Development </h4>In our client side track,
+                                        participants are required to have prior knowledge of basic web languages, and
+                                        most popular frameworks and libraries
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">HTML | CSS | JavaScript |
+                                                ReactJS</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4 col-12 mb-0 mb-xl-5">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__2 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> Backend Development </h4>
+                                        <p class="card-text ">Our backend consist of industry most popular languages.
+                                            This allows you explore your options and makes it easier for you to get your
+                                            dream job.</p>
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">NodeJS | PHP | Go |
+                                                Python</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4  col-12">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__3 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> UI/UX Design </h4>
+                                        <p class="card-text ">We only allow a very limited number of participants join
+                                            the UI/UX track. However, you'll get a chance to switch to another track mid
+                                            program</p>
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">Figma</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4  col-12">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__4 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> Mobile Development </h4>
+                                        <p class="card-text ">We do cross platform development using Flutter. You should
+                                            already have basic skills and the computer to develop mobile applications
+                                        </p>
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">Dart | Flutter </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4  col-12">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__5 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> Enterpreneur Track </h4>
+                                        <p class="card-text ">We are introducing the Enterpreneur track. A few
+                                            participants will be allowed into the Enterpreneurship track. A team is
+                                            selected and funded.</p>
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">Enterpreneur</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4  col-12">
+                            <div class="card-deck">
+                                <div class="card mb-4 scope__6 py-3 px-2">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4"> Digital Marketing </h4>
+                                        <p class="card-text ">The digital marketing track has very little design and no
+                                            coding at all, but participants will be required to show results.</p>
+                                        <hr class="mt-4">
+                                        <p class="card-text"><small class="text-muted">SEO | Analytics</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="banner my-5 ml-0">
+                <div class="container d-flex justify-content-center align-items-center flex-column ">
+                    <h2 class="mb-4 text-center"> Break into the tech industry like a pro </h2><a href="./images/drkbgd_files/">
+                        Enroll Today</a>
+                </div>
+            </section>
+        </div>
+        <div>
+            <div class="footer pb-3">
+                <div class="container">
+                    <div class="row pb-3 px-0 ">
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-between">
+                                <div><a aria-current="page" class="active" href="/"><img
+                                            src="./images/zuriInterlogo.svg" alt="brand logo"
+                                            class="img-fluid mb-2"></a></div>
+                                <div>
+                                    <p class="footer-heading mb-2">Links</p>
+                                    <ul class="nav nav-pills flex-column">
+                                        <li class="nav-item"><a class="footer-links" href="#/terms-conditions"> Terms and
+                                                Conditions </a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="footer-heading pt-3 mb-2">Follow Us</p>
+                                    <ul class="nav nav-pills d-flex">
+                                        <li class="nav-item"><a href="https://facebook.com/thezuriteam"
+                                                class="footer-links"><img src="./images/fb.png" alt="facebook icon"
+                                                    class="mr-4"></a></li>
+                                        <li class="nav-item"><a href="https://twitter.com/theZuriTeam"
+                                                class="footer-links"><img src="./images/twitter.png" alt="twitter icon"
+                                                    class="mr-4"></a></li>
+                                        <li class="nav-item"><a href="https://www.linkedin.com/company/zuri-team/"
+                                                class="footer-links"><img src="./images/in.png" alt="linkedin icon"
+                                                    class="mr-4"></a></li>
+                                        <li class="nav-item"><a href="https://www.instagram.com/thezuriteam/"
+                                                class="footer-links"><img src="./images/IG.png" alt="Instagram icon"
+                                                    class="mr-4"></a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="footer-heading mb-2">Office Address</p>
+                                    <ul class="nav nav-pills flex-column">
+                                        <li class="nav-item footer-links">8 Jubliee-CMD Road, Magodo,</li>
+                                        <li class="nav-item footer-links">Lagos State, Nigeria.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-section-bottom">
+                        <div class="col-12 py-2 text-center">
+                            <p class="footer-copyright">© 2020 Zuri Internship. All Right Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <script src="./lib/typed.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

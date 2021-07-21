@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/faqcss.css">
+    <link rel="stylesheet" href="./css/min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png" sizes="16x16" type="image/pn">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://kit.fontawesome.com/5760397bba.js" crossorigin="anonymous"></script>
+    <style media="all" id="fa-v4-font-face">
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");
+            unicode-range: U+f004-f005, U+f007, U+f017, U+f022, U+f024, U+f02e, U+f03e, U+f044, U+f057-f059, U+f06e, U+f070, U+f075, U+f07b-f07c, U+f080, U+f086, U+f089, U+f094, U+f09d, U+f0a0, U+f0a4-f0a7, U+f0c5, U+f0c7-f0c8, U+f0e0, U+f0eb, U+f0f3, U+f0f8, U+f0fe, U+f111, U+f118-f11a, U+f11c, U+f133, U+f144, U+f146, U+f14a, U+f14d-f14e, U+f150-f152, U+f15b-f15c, U+f164-f165, U+f185-f186, U+f191-f192, U+f1ad, U+f1c1-f1c9, U+f1cd, U+f1d8, U+f1e3, U+f1ea, U+f1f6, U+f1f9, U+f20a, U+f247-f249, U+f24d, U+f254-f25b, U+f25d, U+f271-f274, U+f279, U+f28b, U+f28d, U+f2b5-f2b6, U+f2b9, U+f2bb, U+f2bd, U+f2c1-f2c2, U+f2d0, U+f2d2, U+f2dc, U+f2ed, U+f3a5, U+f3d1, U+f410
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            font-display: block;
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);
+            src: url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"), url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");
+            unicode-range: U+f003, U+f006, U+f014, U+f016, U+f01a-f01b, U+f01d, U+f040, U+f045-f047, U+f05c-f05d, U+f07d-f07e, U+f087-f088, U+f08a-f08b, U+f08e, U+f090, U+f096-f097, U+f0a2, U+f0e4-f0e6, U+f0ec-f0ee, U+f0f5-f0f7, U+f10c, U+f112, U+f114-f115, U+f11d, U+f123, U+f132, U+f145, U+f147-f149, U+f14c, U+f166, U+f16a, U+f172, U+f175-f178, U+f18e, U+f190, U+f196, U+f1b1, U+f1d9, U+f1db, U+f1f7, U+f20c, U+f219, U+f230, U+f24a, U+f250, U+f278, U+f27b, U+f283, U+f28c, U+f28e, U+f29b-f29c, U+f2b7, U+f2ba, U+f2bc, U+f2be, U+f2c0, U+f2c3, U+f2d3-f2d4
+        }
+    </style>
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <title>Zuri.intership</title>
+
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="navigation">
+            <header>
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light px-2"><a class="navbar-brand" href="/"><img
+                                src="./images/zuriInterlogo.svg" alt="brand logo" class="brand-logo"></a><button
+                            class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                            data-target="#navbarDropdown" aria-controls="NavbarDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation"><img
+                                src="./images/drop-download.png"
+                                alt="dropdown menu"></button>
+                        <div class="collapse navbar-collapse" id="navbarDropdown">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link ml-lg-3 pb-1" href="./internship.html">Home</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link nav-button btn mt-3 ml-lg-4 mt-lg-0 h-btn px-4 text-white"
+                                        href="./intern-enrollment.html">Enroll</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="tnc-wrapper">
+            <div class="tnc-header text-center">
+                <div class="container">
+                    <div class="d-md-block mx-auto col-md-8 tnc-header-body">
+                        <p class="tnc-header-title">TERMS AND CONDITIONS</p>
+                        <h2 class="tnc-header-text font-weight-bold">These terms and conditions outline the rules for
+                            the use of Zuri.internship website</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tnc-body py-5">
+                <div class="container">
+                    <div class="py-4">
+                        <p class="tnc-body-title">WHY ZURI.INTERNSHIP</p>
+                        <p class="tnc-body-text pb-3">By accessing this website we assume you accept these terms and
+                            conditions in full. Do not continue to use start.ng's website if you do not accept a ll of
+                            the terms and conditions stated on this page.</p>
+                        <p class="tnc-body-text mb-0">The following terminology applies to these Terms and Conditions,
+                            Privacy Statement and Disclaimer Notice and any or all Agreements: "Client", "You" and
+                            "Your" refers to you, the person accessing this website and accepting the Company's terms
+                            and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company.
+                            "Party", "Parties", or "Us", refers to both the Client and ourselves, or either the Client
+                            or ourselves. All terms refer to the offer, \acceptance and consideration of payment
+                            necessary to undertake the process of our assistance to the Client in the most appropriate
+                            manner, whether by formal meetings of a fixed duration, or any other means, for the express
+                            purpose of meeting the Client's needs in respect of provision of the Company's stated
+                            services/products, in accordance with and subject to, prevailing law of Nigeria. Any use of
+                            the above terminology or other words in the singular, plural, capitalisation and/or he/she
+                            or they, are taken as interchangeable and therefore as referring to same.</p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">COOKIES</p>
+                        <p class="tnc-body-text pt-3">We employ the use of cookies. By using Zuri.internship's website
+                            you consent to the use of cookies in accordance with Zuri.internship's privacy policy.</p>
+                        <p class="tnc-body-text mb-0">Most of the modern day interactive web sites use cookies to enable
+                            us to retrieve user details for each visit. Cookies are used in some areas of our site to
+                            enable the functionality of this area and ease of use for those people visiting. Some of our
+                            affiliate / advertising partners may also use cookies.</p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">HYPERLINKING TO OUR CONTENT</p>
+                        <ol class="tnc-body-text pl-4">
+                            <li class="pb-3">The following organizations may link to our Web site without prior written
+                                approval:<ul class="tnc-sub-list pl-3 pt-3">
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Government agencies;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Search engines;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">News organizations;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Online directory distributors when they list us in the directory
+                                            may link to our Web site in the same manner as they hyperlink to the Web
+                                            sites of other listed businesses; and</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Systemwide Accredited Businesses except soliciting non-profit
+                                            organizations, charity shopping malls, and charity fundraising groups which
+                                            may not hyperlink to our Web site.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="pb-3">These organizations may link to our home page, to publications or to other
+                                Web site information so long as the link:<ul class="tnc-sub-list pl-3 pt-3">
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Is not in any way misleading;Search engines;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Does not falsely imply sponsorship, endorsement or approval of
+                                            the linking party and its products or services;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Lastly fits within the context of the linking party's site..</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="pb-3">These organizations may link to our home page, to publications or to other
+                                Web site information so long as the link:<ul class="tnc-sub-list pl-3 pt-3">
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">commonly-known consumer and/or business information sources such
+                                            as Chambers of Commerce, American Automobile Association, AARP and Consumers
+                                            Union;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Dot.com community sites;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Online directory distributors;</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Accounting, law and consulting firms whose primary clients are
+                                            businesses; and</p>
+                                    </li>
+                                    <li class="pl-2 d-flex">
+                                        <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                        <p class="mb-1">Educational institutions and trade associations.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <p class="tnc-body-text">We will approve link requests from these organizations if we determine
+                            that: (a) the link would not reflect unfavorably on us or our accredited businesses (for
+                            example, trade associations or other organizations representing inherently suspect types of
+                            business, such as work-at-home opportunities, shall not be allowed to link); (b)the
+                            organization does not have an unsatisfactory record with us; (c) the benefit to us from the
+                            visibility associated with the hyperlink outweighs the absence of start.ng; and (d) where
+                            the link is in the context of general resource information or is otherwise consistent with
+                            editorial content in a newsletter or similar product furthering the mission of the
+                            organization.</p>
+                        <p class="tnc-body-text">These organizations may link to our home page, to publications or to
+                            other Web site information so long as the link: (a) is not in any way misleading; (b) does
+                            not falsely imply sponsorship, endorsement or approval of the linking party and it products
+                            or services; and (c) fits within the context of the linking party's site.</p>
+                        <p class="tnc-body-text">If you are among the organizations listed in paragraph 2 above and are
+                            interested in linking to our website, you must notify us by sending an e-mail to
+                            hello@hng.tech. Please include your name, your organization name, contact information (such
+                            as a phone number and/or e-mail address) as well as the URL of your site, a list of any URLs
+                            from which you intend to link to our Web site, and a list of the URL(s) on our site to which
+                            you would like to link. Allow 2-3 weeks for a response.</p>
+                        <p class="tnc-body-text">Approved organizations may hyperlink to our websiter as follows:</p>
+                        <ul class="tnc-sub-list pl-3">
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">By use of our corporate name;</p>
+                            </li>
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">By use of the uniform resource locator (Web address) being linked to;
+                                </p>
+                            </li>
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">By use of any other description of our Web site or material being linked
+                                    to that makes sense within the context and format of content on the linking party's
+                                    site.</p>
+                            </li>
+                        </ul>
+                        <p class="mb-0 tnc-body-text">No use of Zuri.internship's logo or other artwork will be allowed
+                            for linking absent a trademark license agreement.</p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">RESERVATION OF RIGHTS</p>
+                        <p class="mb-0 tnc-body-text">We reserve the right at any time and in its sole discretion to
+                            request that you remove all links or any particular link to our Web site. You agree to
+                            immediately remove all links to our Web site upon such request. We also reserve the right to
+                            amend these terms and conditions and its linking policy at any time. By continuing to link
+                            to our Web site, you agree to be bound to and abide by these linking terms and conditions
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">REMOVAL OF LINKS FROM OUR WEBSITE</p>
+                        <p class="tnc-body-text pt-3">If you find any link on our Web site or any linked web site
+                            objectionable for any reason, you may contact us about this. We will consider requests to
+                            remove links but will have no obligation to do so or to respond directly to you.</p>
+                        <p class="tnc-body-text mb-0">Whilst we endeavour to ensure that the information on this website
+                            is correct, we do not warrant its completeness or accuracy; nor do we commit to ensuring
+                            that the website remains available or that the material on the website is kept up to date.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">CONTENT LIABILITY</p>
+                        <p class="tnc-body-text mb-0">We shall have no responsibility or liability for any content
+                            appearing on your Web site. ou agree to indemnify and defend us against all claims arising
+                            out of or based upon your Website. No link(s) may appear on any page on your Web site or
+                            within any context containing content or materials that may be interpreted as libelous,
+                            obscene or criminal, or which infringes, otherwise violates, or advocates the infringement
+                            or other violation of, any third party rights.</p>
+                    </div>
+                    <hr>
+                    <div class="py-4">
+                        <p class="tnc-body-title">DISCLAIMER</p>
+                        <p class="tnc-body-text">To the maximum extent permitted by applicable law, we exclude all
+                            representations, warranties and conditions relating to our website and the use of this
+                            website (including, without limitation, any warranties implied by law in respect of
+                            satisfactory quality, fitness for purpose and/or the use of reasonable care and skill).
+                            Nothing in this disclaimer will:</p>
+                        <ul class="tnc-sub-list pl-3 tnc-body-text">
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">Limit or exclude our or your liability for death or personal injury
+                                    resulting from negligence;</p>
+                            </li>
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">Limit or exclude our or your liability for fraud or fraudulent
+                                    misrepresentation;</p>
+                            </li>
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">Limit any of our or your liabilities in any way that is not permitted
+                                    under applicable law; oR</p>
+                            </li>
+                            <li class="pl-2 d-flex">
+                                <p class="mr-3 tnc-sub-list-item mb-1"> - </p>
+                                <p class="mb-1">Exclude any of our or your liabilities that may not be excluded under
+                                    applicable law.</p>
+                            </li>
+                        </ul>
+                        <p class="tnc-body-text">The limitations and exclusions of liability set out in this Section and
+                            elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all
+                            liabilities arising under the disclaimer or in relation to the subject matter of this
+                            disclaimer, including liabilities arising in contract, in tort (including negligence) and
+                            for breach of statutory duty.</p>
+                        <p class="tnc-body-text mb-0">To the extent that the website and the information and services on
+                            the website are provided free of charge, we will not be liable for any loss or damage of any
+                            nature</p>
+                    </div>
+                </div>
+            </div>
+            <section class="banner my-5 ml-0">
+                <div class="container d-flex justify-content-center align-items-center flex-column ">
+                    <h2 class="mb-4 text-center"> Break into the tech industry like a pro </h2><a href="/enrollment">
+                        Enroll Today</a>
+                </div>
+            </section>
+        </div>
+        <div class="footer pb-3">
+            <div class="container">
+                <div class="row pb-3 px-0 ">
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-between">
+                            <div><a aria-current="page" class="active" href="/"><img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAAdCAYAAAA6ufdPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUCSURBVHgB7ZpNjts2FMf/mmn32g5QYDi7oF1UCbqPeoJOTzDKCZw5gd0T2D2BlRNkbiBnX2RcoAi6M7uapd1N0UViRS8iR0+0PixZkp2EP4A2RYrkE/nI90gJsFgsFovFYrFYLBaLxfJl4uD0EepfwjI0XhJGKr5Jwi2aQeWlKtsJkyTEDcIcwzBlbd7gMHzkn8GHpQ4fWX+t0IzXqtwaHfT1GU4XNwkv2fWvOE1oxaFBuU/CNSyEQNYX5ji24hu041/0D5kLicz0r3Ga0ID4Ku7CQmxU0P2xwAAI5E3mCpnyDNH2DKlrcqgS+OjH9EeszgBfFj7am36BbOwOZp8VNTKuX2C4jY1EB2bDchQkOhy7Oh91jPzq+Rt2l3HaWEUqeEaey/KimnKeitPMvVT3TNk9ffp/HmvntUoLmDz3Sl7Byuhn4888YvVMjDao7FTVV1bnPvLMD5CZM2b3rlQdAapxjXJVbfDx5WPns/SpqtPslxEaWG0fuya/iBXKzakw6igrR4Ku2fWluqdLs+qj3PTzvJXRrtkHbsmzVZ2MjIznM8O4QlZqk59+RAfIrLmvkCUqkWNdUW6NXcVaoXjsAkO2VYXcj3WWrah0w5xdk2P8M/qDTMSpbEQEMiWWBXncnJn5egNIQW84faS+mmuU42eLE5T7zAL1JlRgf5kDZFaAZAiRt5KvUIzLysmCvDGaI1B+Tk7pEWr0gpSUa3dVR3WxoupZaW6c+CoR4DB87LeiUrhH1oEC+ZVkZdRbJ2Nk1Ms7PkT9SsbzZ6yNtjJPWPqMpQvsuit+QRvcovBnM09l9llRdZ1eiXyVumdWNEc1XShqbplnHEtRTV/7GuUDUiWjKGhTsOAh7xK4JfJMUP88+8r8ErvjK1CMb9wravI5fHwDlh7U1EmELP+OEsxdPxUas2uJdAPVN7/jgJOEh2ffB3Cc546Dzftt/Od3b9+FaA+Zw6WRJlm8iYsijOuo5n5StkVBeohqmsgcIr9ZCVRYIDX7IYqR2B0jicNYlNRB6Tcq/iP9mIpqzq6hjqKWaMnDsx/mcNIZGyfz7zzR1kRxLy/evms7wTZ7pg2FRP0YNJFZ7zdorH2W7qtwiWEWJ0Lum843U7SS+uy66CiqDnO18dAj6Upa4BI4zuThpyc+jo+pLE+TcFURWk/YhkikykryvEJeMSbITl365rok/RcW/9SHWlEF8n6QRLs3Cs9ZXJ+P9cY2jv2yvHjr9DpJSjAnKikeV1YyuZKFjUpz0fFXRjUESMd8qeJPkVfWKwxD0WmBh7xP+4Z+tKKaGyaB4rOtog3WGxYnRz1S+Sv0/KrVcZxjmmTNPyxOSkfPTpsXrbTcjAbIDtd1H+k+u8EwBMgO46fq2jxgH7JfJ0j7QctknozM6KftRymcEPlO9lmcf5jQOc7Z2V3imI520uNEgbfxHYYhRPb8AtlqQP8zFSh9xO4RRh3UR0N9G8xlLTr6oX4bygXR+iFQfKrzuEfq4jO/BdJP8GRJem9c/PHXIllWc44/KWl8vr29WP4tMQwL7G4+9NdDGlKIoo3pRpUn0xtiGMg3vS2RhU5fXmA4aEKU6Q7JGeqErmexwPD+Fh68J2J7/q13Fn9w/9/+d3e1lMdwCfSbG4nqXTq/z1TooTmGLAEy13GB7I0nf+t1Ci6d5SsnQPHbuEpO+Qt/i+URq6iWz4Iudv0WSxP0BpLY+3ThI5aoO0ck9MgFAAAAAElFTkSuQmCC"
+                                        alt="brand logo" class="img-fluid mb-2"></a></div>
+                            <div>
+                                <p class="footer-heading mb-2">Links</p>
+                                <ul class="nav nav-pills flex-column">
+                                    <li class="nav-item"><a class="footer-links active" href="/terms-conditions"
+                                            aria-current="page"> Terms and Conditions </a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="footer-heading pt-3 mb-2">Follow Us</p>
+                                <ul class="nav nav-pills d-flex">
+                                    <li class="nav-item"><a href="https://facebook.com/thezuriteam"
+                                            class="footer-links"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEGSURBVHgBrVJBTsMwENwxRlzzhDwhT3APVbmh3FpOfQBI9CWRygPgBEgcuCEqDuUJ+QHmBfgIUp0hFmnVRq0SI+Y0a8+Ox2tjeF5kEL0EJZEowFYr5Frx+EmEkc0BTJXmUgfSSy5S1ind7+FimuVE92i1oB8sHmY2VKfjIqXo9/Wu6mqvVj5/aZoDvN+dVVcC9/o4KwMZjudTBdy0BR0J4DZMaPYpDiZohlZunWRJeWvczMZ4NLnmPoMjIH2+u/hor5tpkZx8688t4zjoL8l26kNCT97W6dzi/jIP9Wgyv6oDn9W09yuY8F3XBckMgGmLoq/w/waEOPkzaBVFDQKRSBB0FXz+A6IqVthOJxW6AAAAAElFTkSuQmCC"
+                                                alt="facebook icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://twitter.com/theZuriTeam"
+                                            class="footer-links"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFgSURBVHgBlVKxTgJBEJ3ZOyigEAtNqDj/gD/w+AMpLK6DL/ASg7baGTERv0CsCFb4B/sH+AdeZ8TmbAgh7Iyzh5gDD3O8YnczM+/t29lByIHOYNICB46RISYyL3dBVYePb5VCueyhTaKLtdvTg+ss8sXw8x6Aw/UojwCUT7RoKgT2gfjqUgqtarrsfPhx8pdsgTYOClRLMWKcaEphsVQeW0crIYegDtsRzWfTEDvPk7q8bbyZZQQtcU+OXhabCdrd4LDvohGLSokLXrMvZB/+AYOJ7K4YSG+S82Axm70mAt2g2heBp13IzKB77aOkd+onNoJdwOb3wkRgXixq2aJcXLl96Tol0Gvux4pMQ+ZBlJffuoUeOWza6YgbDt69AjmVBaKPimvI2xrKkSJq3ATVaE2ggE6ILpzJRNq/yUIszh5kaHqrxqWBdrGT55RKvmIZa1B7yxR9EaI206nOIq7wDSygl0gYemyXAAAAAElFTkSuQmCC"
+                                                alt="twitter icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://www.linkedin.com/company/zuri-team/"
+                                            class="footer-links"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFLSURBVHgBrVKxSgNBEH2TxGgjBpQELCRaSgQldlokhcLZiXbiPwiKZ2uXU0G/wI+wuXQ2fsBhY6cBK4tg2oS7W9/unfFMEO/EgVlmZt88Zh4jsNvXgDrCX0wpR2C7Ks5CKDxCpMxkPi1HbhiFhToudtYg2ACkl5Wgi8ttz0Qtq0OSh6wEszhtH5rozK1yt1pagoQGemzlUYcaq3MQ9QolAesl1ksk9aiPXm2ZXh6dQCu6D8dqUssVkwdoMl+E5Ovwg3Wjj/53rArBt59thbGZ/PwARQ5VVL7JW1vPY5h+/xiTU3uMZnJIY7Z7z3t5pz4Nk9/s9jjxy/cVfmy+2+TbMDqEOBjWRbrpCAL5WlOSK8sgHcEv9p8EahqZTE3oN3FI6EROsSCricNZoC/FTW/8e4piYojVolzRT+jVyCX+14BREx4RKjGZhp5/AGnRZHnBtZzqAAAAAElFTkSuQmCC"
+                                                alt="linkedin icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://www.instagram.com/thezuriteam/"
+                                            class="footer-links"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPjSURBVHgB3ZRbaFxVFIb/fe4zZyYzTTKhhTQJptqURmyJiDGQtqgoqNUoMVWCGEr1oeBr8UGrCIpXUCl9qnh5EkUsQS1JJJHR0qbW2Gk1NraVXmxzGWMmM5Nz3Xu7TjTQyJTgo92HdeDA5jvr/9cF+L8dttIFKSXr778c0zRLi75jJS62dmfKjDH5n8G7d//Q6DjsKcHk4woXjRbnjAJmKCgkDAobmLQEjqRs9bkdH3ecWhG8pyt7S0lRRhQu04YIEQ8DWILDCjkMLmBIAZ0DGpTFB0yFbmrP9wze9dI1wZ+9fqJu9NDUUVWKpkytivZHmtDQWgMrqUMh5ZH4SH9Q8FC8WMKvH45j4aKL6DdS59u6RrpGllja1eBTQ+e3V4E31dZq6Hm7AxdGzuCX90+Dzy5AoYwVoqpMAdMVxBtT6Ny/Bbk936Jwcg480PcSojLYFm63KQLctLkB+R8vYOKdLOKkSZOknYJRvoLsqN6yHqta1+C3A0fR1L0Op098B8H4pqjQS0VdBk6p3mrTc5Gpj8GdmERKuuSpxNre21D/RDvUhIHZoZ8x8/n38HJn4Y/PINnTBkO4BDbSuTcGMoSZjljKsoxDJ5kUC7BtKkuhiLgoY23XBqy+fyPGH3sLuc698H+fQn1fJ0oHj0NzFsDIHzNKQHjgY/nYEmsZuIqXWEotwFR9xPQSkmYembtbcOXlj2DNzCDuOCi+N4T4pgaYcUCHj0i5xlyyywdcBxU9rk5OIy5LMAwXSqwElv4DzCsgkQngJ2YhfQMyXUcwBtV3ocoEoj5RESy2HUesMrgqPUvgInSNusCmSBcQHB9E9TM7UdT3Q877sHc+icKnX0MPXWIJQPwDpre1BpXBdo0jYv4cFD4HtdqAli4C41/B+ZIGpecBmucqeIePwPvgCxhWghSZ4AVKgIZGMg51+wYH+yqADXs+Z5jlG1hhAkbbfQhHDyzKlicPIjzWD+HSdc+EadsIhIC1bT2Cs1cQmSBM5qy7p2O6YsZ+Xepwqjz9kHJpEGzrDui79kGeyQJOGVFtpK9ABiqEr8NqboN682ZM73qX+luA1+ijV7OWjXQ2m13VOvHauYRRTgtVgWi+FyzVTF7SyuESkpYPfJK9ECI4d4ksOgZ+2YDjV8Ptu/3RjU8/+ElFcHTOD7x5Z5r/dMg2XU1R1b+BNG1wQoiSD/mnD54PEE4yBHkbRTeD/B3tL7Y92/fCNTNeOsPDw02Neu7VhF5+mMlQU6n54XmQrkudEVDBBLxyTLrz8W/mm1tfubW3d+DfjBUX/djY2I1hGCYMwzCjb9oHnqZpRYqplpaWIq6b8xd81LpL6TcGJAAAAABJRU5ErkJggg=="
+                                                alt="Instagram icon" class="mr-4"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="footer-heading mb-2">Office Address</p>
+                                <ul class="nav nav-pills flex-column">
+                                    <li class="nav-item footer-links">8 Jubliee-CMD Road, Magodo,</li>
+                                    <li class="nav-item footer-links">Lagos State, Nigeria.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-section-bottom">
+                    <div class="col-12 py-2 text-center">
+                        <p class="footer-copyright">© 2020 Zuri Internship. All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <script src="./lib/typed.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+
+</html>

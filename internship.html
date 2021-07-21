@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/faqcss.css">
     <link rel="stylesheet" href="./css/min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100;1,200&display=swap"
         rel="stylesheet">
@@ -57,15 +58,7 @@
 
 </head>
 
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
-    </script>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
         <div class="navigation">
             <header>
@@ -74,19 +67,16 @@
                                 src="./images/zuriInterlogo.svg" alt="brand logo" class="brand-logo"></a><button
                             class="navbar-toggler border-0" type="button" data-toggle="collapse"
                             data-target="#navbarDropdown" aria-controls="NavbarDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation"><img src="./images/I4G-Logo-Color-Cropped.png"
+                            aria-label="Toggle navigation"><img
+                                src="./images/I4G-Logo-Color-Cropped.png"
                                 alt="dropdown menu"></button>
                         <div class="collapse navbar-collapse" id="navbarDropdown">
                             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a aria-current="page"
-                                        class="nav-link ml-lg-3 pb-1 activeLink" href="./intership.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="#">Curriculum</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="./faq.html">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-link ml-lg-3 pb-1" href="./contact.html">Contact</a></li>
+                                        class="nav-link ml-lg-3 pb-1 activeLink" href="./internship.html">Home</a></li>
                                 <li class="nav-item"><a
                                         class="nav-link nav-button btn mt-3 ml-lg-4 mt-lg-0 h-btn px-4 text-white"
-                                        href="#">Enroll</a></li>
+                                        href="./intern-enrollment.html">Enroll</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -96,67 +86,39 @@
         <div>
             <section class="hero my-5">
                 <div class="container">
-                    <div class="row mt-5">
-                        <div class=" col-12 col-lg-6 my-2">
-                            <h1 class="pt-1 pt-xl-5 pb-4"> Sign up for HNG Internship 8 - Operated by Zuri. </h1>
-                            <p class="pb-3 text-sm"> "HNG Internship is a long running, large scale virtual internship
-                                for
+                    <div class="row mt-5 ">
+                        <div class="col-12 col-lg-6 my-2">
+                            <h1 class="pt-1 pt-xl-5  pb-4"> Sign up for HNG Internship 8 - Operated by Zuri. </h1>
+                            <p class="pb-3 txt-sm"> HNG Internship is a long running, large scale virtual internship for
                                 people learning to code and design. It focuses on the post-training phase, and creates a
-                                virtual work environment for participants. It is fast paced and challenging, and helps
-                                people learn how to work in teams, deal with pressure and quickly expand their
-                                knowledge."</p>
-                            <div class="my-5 my-xl-5">
-                                <a href="#">Enroll Now</a>
-                            </div>
-                            <p>
-                                <br><strong>In Partnership with:</strong><br><img
-                                    src="./images/I4G-Logo.png" width="60%"
-                                    alt="Ingressive for good logo">
-                            </p>
+                                virtual work environment for participants. </p>
+                            <p>If you have no prior coding or design experience, you can still apply and we'll take you
+                                through the needed training before inviting you for the internship</p>
+                            <div class="my-5 my-xl-5"><a href="/enrollment"> Enroll Now </a></div>
+                            <p><br><strong>In Partnership with:</strong> <br><img
+                                    src="https://ingressive.org/wp-content/uploads/2020/05/I4G-Logo-Color-Cropped.png"
+                                    width="30%" alt="Ingressive for good logo"></p>
                         </div>
-                        <div class="col-12 col-lg-5 ml-auto text-center">
-                            <img class="img-fluid" src="./images/devs.png" alt="Banner Rep" width="180%" height="500px">
-                        </div>
-
+                        <div class="col-12 col-lg-5 ml-auto text-center"><img class="img-fluid"
+                                src="./images/devs.png" alt="Banner Rep"></div>
                     </div>
                 </div>
             </section>
             <section class="about my-4 py-0 py-lg-5 ">
                 <div class="container">
-                    <h3 class="text-uppercase mt-2"> About Zuri Internship </h3>
-                    <h4 class="mb-lg-3 mb-0 "> "Zuri Internship runs internships that are designed to surface the very
-                        best of candidates out of a large pool of participants." </h4>
-                    <div class="row pt-5 pb-lg-5 pb-0 ">
-                        <div class="col-12 col-lg-6 mr-auto text-center text-lg-left ">
-                            <img src="./images/ldimg1.png" class="img-fluid " alt="About Zuri one">
-                        </div>
-                        <div class="col-12 col-lg-6 d-flex align-items-end">
-                            <div>
-                                <h2 class="mb-4 mt-4 mt-lg-0">How the program runs</h2>
-                                <p>There are 10 stages, you are required to complete all the 10 stages (which becomes
-                                    increasingly more difficult as you go higher), after which you become Finalist.
-                                    Being a finalist is a mark of honour - it shows that you have grit, perseverance,
-                                    and can solve various problems successfully. <br><br>The program is designed to
-                                    surface the very best of candidates - that means that even though an unlimited
-                                    number of people can start, only a small percentage of those who start will complete
-                                    the program. Typically, this is less than 10%. <br><br>A finalist is someone we can
-                                    firmly recommend to any company for employment - because they have shown that they
-                                    have what it takes.</p>
-                                <div class="about__link  mt-1 mt-lg-5">
-                                    <a href="#">Enroll Now <img src="./images/a-head.svg"
-                                            alt="right arrow"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-uppercase mt-2"> About The Internship </h3>
+                    <h4 class="mb-lg-3 mb-0 ">The Internship is designed to surface the very best of candidates out of a
+                        large pool of participants. It is fast paced and challenging, and helps people learn how to work
+                        in teams, deal with pressure and quickly expand their knowledge.</h4>
                     <div class="row pt-5 pb-lg-5 pb-0 ">
                         <div class="col-12 col-lg-6 d-flex align-items-end order-2 order-lg-1">
                             <div>
                                 <h2 class="mb-4 mt-4 mt-lg-0">Who Should Apply</h2>
-                                <p class="pr-0 pr-lg-5">Each Internship cohort is slightly different, even though we
-                                    follow the same basic pattern. The current iteration is a follow-on phase for the
-                                    ZurixIngressive Training, as well as the Reskill Americans training. It is open to
-                                    everyone to join, but <strong>requires a bit of pre-knowledge. </strong><br><br>
+                                <p class="pr-0 pr-lg-5">Anybody can apply. The Internship itself focuses on participants
+                                    with prior experience either by going through the <a
+                                        href="https://training.zuri.team">training phase</a>, or self learning. However,
+                                    if you have no prior experience, we still encourage you to apply and we'll take you
+                                    through the needed training before adding you to the Internahip.<br><br>
                                     <ul>
                                         <li>If you have prior coding or design skills / knowledge</li>
                                         <li>If you are a professional looking to connect with others</li>
@@ -164,33 +126,12 @@
                                     </ul>The internship is a fun-filled experience that runs like a game, join us, and
                                     we promise you'll come out better, even if you're unable to complete the program.
                                 </p>
-                                <div class="about__link  mt-1 mt-lg-5"><a href="enrollment.html">Enroll Now <img
+                                <div class="about__link  mt-1 mt-lg-5"><a href="/enrollment">Enroll Now <img
                                             src="./images/a-head.svg" alt="row"></a></div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 mr-auto text-lg-left text-center order-1 order-lg-2 "><img
-                                src="./images/Idimg2.png" class="img-fluid " alt="About Zuri two"></div>
-                    </div>
-                    <div class="row pt-5 pb-5 ">
-                        <div class="col-12 col-lg-6 mr-auto text-lg-left text-center"><img src="./images/Idimg3.png"
-                                class="img-fluid " alt="About Zuri three"></div>
-                        <div class="col-12 col-lg-6 d-flex align-items-end">
-                            <div>
-                                <h2 class="mb-4 mt-4 mt-lg-0">Grow your portfolio</h2>
-                                <p>We allow anybody and everybody to enter the workspace. The workspace will have more
-                                    than 10,000 people active in it at the beginning. There are 10 stages - and as you
-                                    progress, those who do not make it through are removed from the workspace. <br>The
-                                    first three stages are a basic filter stage. <br><br>
-                                    <p>You will be given tasks that are more focused with real world experiences. They
-                                        typically involve a real world task which aims at identifying the most
-                                        committed/driven interns and helping them harness their skills better.</p>We
-                                    also give rewards as you deliver on tasks. Rewards are usually in difference forms
-                                    including cash and premium courses.
-                                </p>
-                                <div class="about__link  mt-1 mt-lg-5"><a href="#">Enroll Now <img
-                                            src="./images/a-head.svg" alt="row"></a></div>
-                            </div>
-                        </div>
+                                src="./images/ldimg1.png" class="img-fluid " alt="About Zuri two"></div>
                     </div>
                 </div>
             </section>
@@ -262,20 +203,6 @@
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-4  col-12">
                             <div class="card-deck">
-                                <div class="card mb-4 scope__5 py-3 px-2">
-                                    <div class="card-body">
-                                        <h4 class="card-title mb-4"> Enterpreneur Track </h4>
-                                        <p class="card-text ">We are introducing the Enterpreneur track. A few
-                                            participants will be allowed into the Enterpreneurship track. A team is
-                                            selected and funded.</p>
-                                        <hr class="mt-4">
-                                        <p class="card-text"><small class="text-muted">Enterpreneur</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-4  col-12">
-                            <div class="card-deck">
                                 <div class="card mb-4 scope__6 py-3 px-2">
                                     <div class="card-body">
                                         <h4 class="card-title mb-4"> Digital Marketing </h4>
@@ -290,65 +217,122 @@
                     </div>
                 </div>
             </section>
+            <div id="faq">
+                <div class="faqs">
+                    <div class="faq ">
+                        <div class="faq-question">As a novice, can I apply for the Internship?</div>
+                        <div class="faq-answer">Yes, however, you will not be admitted into the Internship until you go
+                            through the training phase</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">What is Zuri Internship all about?</div>
+                        <div class="faq-answer">A Remote internship that enables you learn and improve your skills by
+                            working on real-world projects</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">What Benefits can I get from the internship?</div>
+                        <div class="faq-answer">Benefits upon completion include access to Zuri network comprising of
+                            past finalists, improving your portfolio (via the product/project you worked on), access to
+                            job opportunities and occasional stipends depending on performance during the internship
+                        </div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">When will the Internship begin?</div>
+                        <div class="faq-answer">August 2021, follow on on twitter @thezuriteam to more information</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">How long does the internship last?</div>
+                        <div class="faq-answer">About 3 months.</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">Will I be employed by Zuri upon completion of the internship?</div>
+                        <div class="faq-answer">You will be added to our network of talent, and recommended to potential
+                            employers</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">Will mentors be available for physical mentorship?</div>
+                        <div class="faq-answer">Meetups will be held where mentors around your region will be available
+                            to answer to any question.</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">Do I get to have a personal mentor?</div>
+                        <div class="faq-answer">Mentors can be contacted privately for guidance during the internship.
+                        </div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">How often do we build new projects?</div>
+                        <div class="faq-answer">Every week new projects are assigned to interns as tasks to complete and
+                            present to be promoted to the next stage.</div>
+                    </div>
+                    <div class="faq ">
+                        <div class="faq-question">Error: Select a Country from the list</div>
+                        <div class="faq-answer">if you get this error, you are advised to use updated chrome browser,
+                            Ensure your network is good, There is a dropdown list of countries you can select from,
+                            choose your country, If the error persist, type the name of your country without trailing
+                            space.</div>
+                    </div>
+                </div>
+            </div>
             <section class="banner my-5 ml-0">
                 <div class="container d-flex justify-content-center align-items-center flex-column ">
-                    <h2 class="mb-4 text-center"> Break into the tech industry like a pro </h2><a href="./images/drkbgd_files/">
+                    <h2 class="mb-4 text-center"> Break into the tech industry like a pro </h2><a href="/enrollment">
                         Enroll Today</a>
                 </div>
             </section>
         </div>
-        <div>
-            <div class="footer pb-3">
-                <div class="container">
-                    <div class="row pb-3 px-0 ">
-                        <div class="col-lg-12">
-                            <div class="d-flex justify-content-between">
-                                <div><a aria-current="page" class="active" href="/"><img
-                                            src="./images/zuriInterlogo.svg" alt="brand logo"
-                                            class="img-fluid mb-2"></a></div>
-                                <div>
-                                    <p class="footer-heading mb-2">Links</p>
-                                    <ul class="nav nav-pills flex-column">
-                                        <li class="nav-item"><a class="footer-links" href="#/terms-conditions"> Terms and
-                                                Conditions </a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="footer-heading pt-3 mb-2">Follow Us</p>
-                                    <ul class="nav nav-pills d-flex">
-                                        <li class="nav-item"><a href="https://facebook.com/thezuriteam"
-                                                class="footer-links"><img src="./images/fb.png" alt="facebook icon"
-                                                    class="mr-4"></a></li>
-                                        <li class="nav-item"><a href="https://twitter.com/theZuriTeam"
-                                                class="footer-links"><img src="./images/twitter.png" alt="twitter icon"
-                                                    class="mr-4"></a></li>
-                                        <li class="nav-item"><a href="https://www.linkedin.com/company/zuri-team/"
-                                                class="footer-links"><img src="./images/in.png" alt="linkedin icon"
-                                                    class="mr-4"></a></li>
-                                        <li class="nav-item"><a href="https://www.instagram.com/thezuriteam/"
-                                                class="footer-links"><img src="./images/IG.png" alt="Instagram icon"
-                                                    class="mr-4"></a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="footer-heading mb-2">Office Address</p>
-                                    <ul class="nav nav-pills flex-column">
-                                        <li class="nav-item footer-links">8 Jubliee-CMD Road, Magodo,</li>
-                                        <li class="nav-item footer-links">Lagos State, Nigeria.</li>
-                                    </ul>
-                                </div>
+        <div class="footer pb-3">
+            <div class="container">
+                <div class="row pb-3 px-0 ">
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-between">
+                            <div><a aria-current="page" class="active" href="/"><img
+                                        src="./images/zuri-internship.svg"
+                                        alt="brand logo" class="img-fluid mb-2"></a></div>
+                            <div>
+                                <p class="footer-heading mb-2">Links</p>
+                                <ul class="nav nav-pills flex-column">
+                                    <li class="nav-item"><a class="footer-links" href="/terms-conditions"> Terms and
+                                            Conditions </a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="footer-heading pt-3 mb-2">Follow Us</p>
+                                <ul class="nav nav-pills d-flex">
+                                    <li class="nav-item"><a href="https://facebook.com/thezuriteam"
+                                            class="footer-links"><img
+                                                src="./images/fb.png"
+                                                alt="facebook icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://twitter.com/theZuriTeam"
+                                            class="footer-links"><img
+                                                src="./images/twitter.png"
+                                                alt="twitter icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://www.linkedin.com/company/zuri-team/"
+                                            class="footer-links"><img
+                                                src="./images/in.png"
+                                                alt="linkedin icon" class="mr-4"></a></li>
+                                    <li class="nav-item"><a href="https://www.instagram.com/thezuriteam/"
+                                            class="footer-links"><img
+                                                src="./images/IG.png"
+                                                alt="Instagram icon" class="mr-4"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="footer-heading mb-2">Office Address</p>
+                                <ul class="nav nav-pills flex-column">
+                                    <li class="nav-item footer-links">8 Jubliee-CMD Road, Magodo,</li>
+                                    <li class="nav-item footer-links">Lagos State, Nigeria.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="footer-section-bottom">
-                        <div class="col-12 py-2 text-center">
-                            <p class="footer-copyright">© 2020 Zuri Internship. All Right Reserved</p>
-                        </div>
+                </div>
+                <hr>
+                <div class="footer-section-bottom">
+                    <div class="col-12 py-2 text-center">
+                        <p class="footer-copyright">© 2020 Zuri Internship. All Right Reserved</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <script src="./lib/jquery-3.6.0.min.js"></script>

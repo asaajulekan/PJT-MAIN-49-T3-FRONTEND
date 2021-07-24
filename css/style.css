@@ -3,22 +3,12 @@
     font-family: Averta, sans-serif;
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-}
+
 element.style {
     position: absolute;
     left: 130.86%;
@@ -27,13 +17,13 @@ element.style {
 div {
     display: block;
 }
-
+a{
+    text-decoration: none;
+}
 /* links */
 link {
     display: none;
 }
-
-
 
 @media (max-width: 768px) {
     .hero-container {
@@ -277,22 +267,11 @@ section {
 
 .container-fluid {
     margin: 0 auto;
-    /* max-width: 1240px; */
+    max-width: 1240px;
     text-align: center;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
-.program-content {
-    padding-top: 0 !important;
-}
-
-.container-fluid {
-    max-width: 1440px !important;
-}
-
-.text-center {
-    text-align: center !important;
-}
 
 .container-fluid,
 .container-lg,
@@ -585,37 +564,7 @@ h3 {
     font-size: 1.75rem;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: .5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-}
-
-
-.m-3 {
-    margin: 1rem !important;
-}
 
 footer hr {
     opacity: 0.2;
@@ -773,34 +722,6 @@ h5 {
     font-size: 1.25rem;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: .5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-}
 
 p {
     margin-top: 0;
@@ -1690,4 +1611,139 @@ footer, footer ul li a {
 a {
     text-decoration: none!important;
     color: #514949;
+}
+
+
+
+.home-page .custom-col-6 img {
+    margin-bottom: 15px;
+}
+.home-page .flyin-top {
+    -webkit-animation: flyin-top 1s ease-in;
+    animation: flyin-top 1s ease-in;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-page .custom-col-6 img {
+    margin-bottom: 15px;
+}
+.home-page .custom-col-6 img {
+    margin-bottom: 15px;
+}
+.home-page .flyin-bottom {
+    -webkit-animation: flyin-bottom 1s ease-in;
+    animation: flyin-bottom 1s ease-in;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+.home-page .custom-col-6.top-offset {
+    padding-top: 75px;
+}
+.home-page .custom-col-6 {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    max-width: 150px;
+}
+
+.home-page .custom-col-6 img {
+    margin-bottom: 15px;
+}
+.home-page .flyin-right {
+    -webkit-animation: flyin-right 1s ease-in;
+    animation: flyin-right 1s ease-in;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+home-page .custom-col-6 img {
+    margin-bottom: 15px;
+}
+.home-page .flyin-bottomright {
+    -webkit-animation: flyin-bottomright 1s ease-in;
+    animation: flyin-bottomright 1s ease-in;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+.home-page .custom-col-6.top-offset {
+    padding-top: 75px;
+}
+.home-page .custom-col-6 {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    max-width: 150px;
+}
+
+
+
+
+
+@media (min-width: 992px){
+.home-page #desktop .card-container {
+    flex: 15% 1;
+}
+.home-page #desktop .card-container {
+    flex: 50% 1;
+    margin: .5rem 0;
+}
+}
+
+.home-page .card-container .card {
+    height: 100%;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.home-page #desktop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-title {
+    margin-bottom: .75rem;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 992px){
+.home-page #desktop .card-container {
+    flex: 15% 1;
+}
+}
+.home-page #desktop .card-container {
+    flex: 50% 1;
+    margin: .5rem 0;
+}
+
+
+
+.home-page .pp {
+    color: #514949;
+    font-size: 24px;
 }
